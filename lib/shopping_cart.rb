@@ -21,5 +21,10 @@ class ShoppingCart
     total_quantity
   end
 
+  def is_full?
+    total_quantity = total_number_of_products
+    total_quantity >= @capacity
+  end
+
 
 end
