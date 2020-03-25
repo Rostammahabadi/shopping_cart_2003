@@ -51,6 +51,17 @@ class ShoppingCart
   def sorted_products_by_quantity
     quantity = @products.map.sort_by do |product|
       product.to_s.length
-      end
     end
   end
+
+  def product_breakdown
+    breakdown = Hash.new()
+    #issue: it is rewriting the :paper key when i need it to add it to
+    #the existing hash key :paper
+    @products.group_by do |product|
+      breakdown[product.category] = product
+    end
+
+  end
+
+end
