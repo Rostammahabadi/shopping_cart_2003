@@ -9,4 +9,9 @@ class ShoppingCart
 
   end
 
+  def add_product(product)
+    @products << product
+  end
+
+
 end
