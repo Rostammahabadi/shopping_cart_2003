@@ -35,4 +35,12 @@ class ShoppingCart
     end
     categorical
   end
+
+  def detail
+    details = Hash.new()
+    details[:name] = @name
+    details[:capacity] = @capacity
+    details
+  end
+
 end
