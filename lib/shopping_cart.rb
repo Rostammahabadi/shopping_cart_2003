@@ -26,5 +26,13 @@ class ShoppingCart
     total_quantity >= @capacity
   end
 
-
+  def products_by_category(category)
+    categorical= []
+    @products.group_by do |product|
+      if product.category == category
+        categorical << product.category
+      end
+    end
+    categorical
+  end
 end
