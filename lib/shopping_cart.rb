@@ -48,4 +48,9 @@ class ShoppingCart
     return (occupied / @capacity.to_f).round(4)*100
   end
 
-end
+  def sorted_products_by_quantity
+    quantity = @products.map.sort_by do |product|
+      product.to_s.length
+      end
+    end
+  end
